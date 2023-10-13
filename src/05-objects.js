@@ -8,9 +8,9 @@
  * // person might be { name: 'John Doe', age: 30, city: 'New York' }
  */
 function createPersonObject() {
-    
+return {name:"John",lastName:"Doe",age:22,city:"New York"}
 }
-
+createPersonObject()
 
 /**
  * This function returns the name of the given person object.
@@ -23,8 +23,10 @@ function createPersonObject() {
  * // personName will be 'John Doe'
  */
 function getPersonName(person) {
-
+   const personName = {name: 'John Doe', age: 30, city: 'New York' };
+return personName.name
 }
+getPersonName(name);
 
 
 /**
@@ -40,8 +42,16 @@ function getPersonName(person) {
  *
  */
 function findPersonByName(persons, name) {
-
+persons.forEach((persons) =>{
+    if (persons.includes(name)){
+        return persons.name
+    }
+    else console.log("no");
+    }
+)
 }
+
+findPersonByName(["hanna","james","jamie"],"hanna")
 
 
 /**
@@ -55,5 +65,10 @@ function findPersonByName(persons, name) {
  * // totalAge will be 55
  */
 function getTotalAge(persons) {
-
+   let totalAge = 0;
+persons.forEach((element) => {
+   totalAge = totalAge + element
+})
 }
+
+getTotalAge([23,15,73])
